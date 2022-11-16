@@ -7,8 +7,6 @@
     <title>로그인 페이지</title>
     <style>
         .mytitle {
-            background-color : green;
-
             width: 300px;
             height: 200px;
 
@@ -24,18 +22,25 @@
 
             padding-top: 40px;
         }
+
+        .wrap {
+            width: 300px;
+            margin: auto;
+        }
     </style>
 </head>
 <body>
-    <div class = "mytitle">
-        <h1>로그인 페이지</h1>
+    <div class = "wrap">
+        <div class = "mytitle">
+            <h1>로그인 페이지</h1>
 
-        <h5>아이디, 비밀번호를 입력해주세요</h5>
+            <h5>아이디, 비밀번호를 입력해주세요</h5>
+        </div>
+        
+        <p>ID : <input type="text" /></p>
+        <p>PW : <input type="text" /></p>
+        <button>로그인하기</button>
     </div>
     
-    <p>ID : <input type="text" /></p>
-    <p>PW : <input type="text" /></p>
-
-    <button>로그인하기</button>
 </body>
 </html>

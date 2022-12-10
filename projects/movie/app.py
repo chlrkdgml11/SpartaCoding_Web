@@ -52,7 +52,9 @@ def movie_post():
 
 @app.route("/movie", methods=["GET"])
 def movie_get():
-    return jsonify({'msg': 'GET 연결 완료!'})
+    movie_list = list(db.naver_movies.find({}, {'_id' : False}))
+
+    return jsonify({'movies': movie_list})
 
 
 if __name__ == '__main__':

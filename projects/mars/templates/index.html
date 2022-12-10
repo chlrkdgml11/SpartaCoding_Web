@@ -66,12 +66,17 @@
             });
         }
         function save_order() {
+            let name = $('#name').val()
+            let address = $('#address').val()
+            let size = $('#size').val()
+            
             $.ajax({
                 type: 'POST',
                 url: '/mars',
-                data: { sample_give:'데이터전송' },
+                data: { name_give: name, address_give: address, size_give: size},
                 success: function (response) {
                     alert(response['msg'])
+                    window.location.reload()
                 }
             });
         }
